@@ -8,7 +8,7 @@ pipeline {
 //untracked 
 
 parameters{
-    string(name:'ENV',defaultValue:'Dev',description:'this is for env app')
+   // string(name:'ENV',defaultValue:'Dev',description:'this is for env app')
     // booleanParam(name:'execution',defaultValue:'true',description:'check the execution')
     choice(name:'APPVERSION',choices:['1.1','1.2','1.3'])
 }
@@ -27,7 +27,7 @@ parameters{
     }
     stage('Package4') {
             steps {
-                echo " this is code  package for pipeline 4 ${params.ENV}"
+                echo " this is code  package for pipeline 4 "
            ls statu }
         }
     }
