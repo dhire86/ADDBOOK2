@@ -7,7 +7,7 @@ pipeline {
     }
 parameters {
     choice(name:'appversion',choices:['1,1','1.2'])
-    string(name:"testenv',defaultValue:'Dev')
+    string(name:'testenv',defaultValue:'Dev')
 }
     
 //untracked 
