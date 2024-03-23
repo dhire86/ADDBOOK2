@@ -13,7 +13,7 @@ parameters {
 //untracked 
     stages {
         stage('compilecode4') {
-            agent {label 'testmaven'}
+            agent {label 'slavejenkins'}
             steps {
                 echo " this is code compile for pipeline 4 ${params.appversion}"
                 sh 'mvn compile'
