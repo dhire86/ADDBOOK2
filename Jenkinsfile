@@ -9,7 +9,7 @@ pipeline {
 
 parameters{
     string(name:'Env',defaultValue:'Dev',description:'this is for env app')
-    booleanParam(name:'execution',defaultValue:'true',description:'check the execution')
+    // booleanParam(name:'execution',defaultValue:'true',description:'check the execution')
     choice(name:'appversion',choices:['1.1','1.2','1.3'])
 }
     stages {
