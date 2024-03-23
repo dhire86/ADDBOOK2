@@ -5,11 +5,15 @@ pipeline {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "testmaven"
     }
+parameters {
+    choice(name:'appversion',choices:['1,1','1.2'])
+}
+    
 //untracked 
     stages {
         stage('compilecode4') {
             steps {
-                echo " this is code compile for pipeline 4"
+                echo " this is code compile for pipeline 4 ${params.appversion}"
             }
         }
     
