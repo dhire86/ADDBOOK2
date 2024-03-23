@@ -10,13 +10,13 @@ pipeline {
 parameters{
    // string(name:'ENV',defaultValue:'Dev',description:'this is for env app')
     // booleanParam(name:'execution',defaultValue:'true',description:'check the execution')
-    choice(name:'APPVERSION',choices:['1.1','1.2','1.3'])
+   // choice(name:'APPVERSION',choices:['1.1','1.2','1.3'])//
 }
     stages {
         stage('compilecode4') {
             steps {
     choice(name:'appversion',choices:['1.1','1.2','1.3'])
-                echo " this is code compile for pipeline 4 ${params.APPVERSION}"
+                echo " this is code compile for pipeline 4 "
             }
         }
     
