@@ -15,17 +15,20 @@ parameters {
         stage('compilecode4') {
             steps {
                 echo " this is code compile for pipeline 4 ${params.appversion}"
+                sh 'mvn compile'
             }
         }
     
     stage('Testunit4') {
             steps {
                 echo " this is code unit test for pipeline 4"
+                sh 'mvn test'
             }
     }
     stage('Package4') {
             steps {
                 echo " this is code  package for pipeline 4  "
+                sh 'mvn package'
             }
         }
     }
