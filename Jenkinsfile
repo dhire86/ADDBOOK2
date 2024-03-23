@@ -8,15 +8,15 @@ pipeline {
 //untracked 
 
 parameters{
-    string(name:'Env',defaultValue:'Dev',description:'this is for env app')
+    string(name:'ENV',defaultValue:'Dev',description:'this is for env app')
     // booleanParam(name:'execution',defaultValue:'true',description:'check the execution')
-    choice(name:'appversion',choices:['1.1','1.2','1.3'])
+    choice(name:'APPVERSION',choices:['1.1','1.2','1.3'])
 }
     stages {
         stage('compilecode4') {
             steps {
     choice(name:'appversion',choices:['1.1','1.2','1.3'])
-                echo " this is code compile for pipeline 4 ${params.appversion}"
+                echo " this is code compile for pipeline 4 ${params.APPVERSION}"
             }
         }
     
@@ -27,7 +27,7 @@ parameters{
     }
     stage('Package4') {
             steps {
-                echo " this is code  package for pipeline 4 ${params.Env}"
+                echo " this is code  package for pipeline 4 ${params.ENV}"
            ls statu }
         }
     }
