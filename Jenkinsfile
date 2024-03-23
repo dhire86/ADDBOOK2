@@ -7,6 +7,7 @@ pipeline {
     }
 parameters {
     choice(name:'appversion',choices:['1,1','1.2'])
+    string(name:"testenv',defaultValue:'Dev')
 }
     
 //untracked 
@@ -24,7 +25,7 @@ parameters {
     }
     stage('Package4') {
             steps {
-                echo " this is code  package for pipeline 4"
+                echo " this is code  package for pipeline 4  ${parama.testenv}"
             }
         }
     }
