@@ -3,14 +3,14 @@ sudo yum install git -y
 sudo yum install maven -y
 sudo yum install java-1.8.0-openjdk-devel -y 
 
-if [ -d "ADDRESSBOOK2" ]
+if [ -d "ADDRBOOK2" ]
 then
    echo "repo is already cloned and exists"
-   cd /home/ec2-user/ADDRESSBOOK2
+   cd /home/ec2-user/ADDBOOK2
    git pull origin master
 else
    git clone https://github.com/dhire86/ADDBOOK2.git
-   cd ADDRESSBOOK2
+   cd ADDBOOK2
    git checkout master
 fi
 
