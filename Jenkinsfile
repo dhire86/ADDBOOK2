@@ -34,6 +34,7 @@ parameters {
                  script{
                 sshagent(['newslave2']) {
                 echo " this is code  package for pipeline 4  "
+                sh "scp server-config.sh ec2-user@172.31.45.240:/home/ec2-user"
                 sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.45.240 'bash ~/server-config.sh'"
             }
                  }
