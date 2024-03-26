@@ -1,8 +1,4 @@
-<<<<<<< HEAD
     pipeline {
-=======
-pipeline {
->>>>>>> d733a83e38ed7a85c61f4d3c4bcffe1e904b518b
     agent none
 
     tools {
@@ -23,19 +19,24 @@ parameters {
                 sh 'mvn compile'
             }
         }
-    
     stage('Testunit4') {
           agent any
-            steps {
+           steps {        
+                                               
                 echo " this is code unit test for pipeline 4"
                 sh 'mvn test'
+                      }
             }
-    }
+          
     stage('Package4') {
         agent any
             steps {
+                 script{
+                sshagent(['newslave2']) {
                 echo " this is code  package for pipeline 4  "
-                sh 'mvn package'
+                sh "ssh ec2-user@172.31.45.240 'bash ~/server-config.sh'"
+            }
+                 }
             }
         }
     }
