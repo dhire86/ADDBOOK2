@@ -1,4 +1,8 @@
+<<<<<<< HEAD
     pipeline {
+=======
+pipeline {
+>>>>>>> d733a83e38ed7a85c61f4d3c4bcffe1e904b518b
     agent none
 
     tools {
